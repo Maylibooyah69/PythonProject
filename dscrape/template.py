@@ -5,6 +5,8 @@ Created on Wed May  8 15:57:44 2019
 
 @author: maylibooyah69
 """
+#Reference: https://medium.freecodecamp.org/how-to-scrape-websites-with-python-and-beautifulsoup-5946935d93fe
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import csv
