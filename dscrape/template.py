@@ -21,7 +21,16 @@ soup = BeautifulSoup(page, 'html.parser')
 name_box = soup.findAll('span', attrs={'class': 'content-title'}) #tag pattern1
 name_box2 = soup.findAll('a', attrs={'class': 'text-excerpt'}) #tag pattern2
 
+def clean_strings(strings): 
+    result = []
+    for value in strings:
+        value = value.strip()
+        value = re.sub('[!#?]', '', value) 
+        value = value.title()
+        result.append(value)
+    return result
 temp=[]
+
 for i in zip(name_box,name_box2):
     text="Title: "+i[0].text.strip() + "\nReview:" + i[1].text.strip()
     temp.append(text)
