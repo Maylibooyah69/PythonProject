@@ -1,4 +1,4 @@
-#this right here is a binary symmetric channel for texts
+ls#this right here is a binary symmetric channel for texts
 #f is the probability P(message!=signal)
 #will do image implementation
 from random import random as rdm
